@@ -24,3 +24,11 @@ ln -sf $home/configfiles/$now $home/.config/i3/config
 now=i3statusconfig
 mkdir -p $home/.config/i3status/
 ln -sf $home/configfiles/$now $home/.config/i3status/config
+
+now=polybar.ini
+mkdir -p $home/.config/polybar/
+ln -sf $home/configfiles/$now $home/.config/polybar/config.ini
+
+now=polybar.ini
+mkdir -p $home/.config/polybar/
+ln -sf $home/configfiles/$now $home/.config/polybar/launch.sh
