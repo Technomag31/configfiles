@@ -1,4 +1,3 @@
-
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -12,7 +11,18 @@ zstyle :compinstall filename '/home/technomag31/.zshrc'
 autoload -U colors && colors
 autoload -Uz compinit
 compinit
-# End of lines added by compinstall
+
+# Don't save duplicates in zsh history
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_FIND_NO_DUPS
+setopt HIST_SAVE_NO_DUPS
+
+# Up/down arrow key searches through input command
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
 
 
 autoload -U compinit promptinit
