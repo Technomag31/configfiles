@@ -29,6 +29,9 @@ now=polybar.ini
 mkdir -p $home/.config/polybar/
 ln -sf $home/configfiles/$now $home/.config/polybar/config.ini
 
-now=polybar.ini
+now=polybarlaunch.sh
 mkdir -p $home/.config/polybar/
 ln -sf $home/configfiles/$now $home/.config/polybar/launch.sh
+
+now=mc
+ln -sf $home/configfiles/$now $home/.config/mc

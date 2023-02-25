@@ -201,3 +201,7 @@ exec_always --no-startup-id  picom --daemon
 #
 exec_always --no-startup-id  ~/.config/polybar/launch.sh
 for_window [class="^.*"] border none
+
+#programs
+exec telegram-desktop
+exec discord
