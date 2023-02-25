@@ -1,7 +1,41 @@
 # /bin/bash
-# auto replace all config files with soft links
-home=$(echo $HOME)
+# auto setup for me
+#run root part first!
 
+#main user
+home=/home/technomag31/
+#second drive for big files
+hdd=/home/myfiles
+
+
+#home dirs. soft links may slow down system
+#games on hhd is not the best idea, but if you download and delete big games in one day, it will help your ssd to live longer
+mkdir $hdd/Games
+ln -sf $hdd/Games $home/Games
+ln -sf $hdd/Games $home/GOG\ Games
+mkdir $hdd/Steam
+mkdir -p $home/.local/share/
+ln -sf $hdd/Steam $home/.local/share/Steam
+#If you are using VirtualBox
+mkdir $hdd/VirtualBox\ VMs
+ln -sf $hdd/VirtualBox\ VMs $home/VirtualBox\ VMs
+#
+mkdir $hdd/Downloads
+ln -sf $hdd/Downloads $home/Downloads
+mkdir $hdd/Desktop
+ln -sf $hdd/Desktop $home/Desktop
+mkdir $hdd/Documents
+ln -sf $hdd/Documents $home/Documents
+#If you are video editor you may prefer store video on ssh to speed up work
+mkdir $hdd/Videos
+ln -sf $hdd/Videos $home/Videos
+#My own dirs
+mkdir $hdd/Backups
+ln -sf $hdd/Backups $home/Backups
+mkdir $hdd/Important
+ln -sf $hdd/Important $home/Important
+
+#config files, they must be on ssh to speed up programs
 now=.zshrc
 ln -sf $home/configfiles/$now $home/$now
 
