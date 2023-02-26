@@ -5,7 +5,7 @@
 #main user
 home=/home/technomag31/
 #second drive for big files
-hdd=/home/myfiles
+hdd=/media/terra/
 
 
 #home dirs. soft links may slow down system
@@ -22,8 +22,6 @@ ln -sf $hdd/VirtualBox\ VMs $home/VirtualBox\ VMs
 #
 mkdir $hdd/Downloads
 ln -sf $hdd/Downloads $home/Downloads
-mkdir $hdd/Desktop
-ln -sf $hdd/Desktop $home/Desktop
 mkdir $hdd/Documents
 ln -sf $hdd/Documents $home/Documents
 #If you are video editor you may prefer store video on ssh to speed up work
@@ -34,6 +32,9 @@ mkdir $hdd/Backups
 ln -sf $hdd/Backups $home/Backups
 mkdir $hdd/Important
 ln -sf $hdd/Important $home/Important
+#wine
+mkdir $hdd/.wine
+ln -sf $hdd/.wine $home/.wine
 
 #config files, they must be on ssh to speed up programs
 now=.zshrc
